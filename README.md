@@ -11,7 +11,7 @@ Welcome to the **Pico Pi Day Workshop**! In this workshop, you'll learn how to c
     - [1. Clone the Repository](#1-clone-the-repository)
     - [2. Install Thonny (if not installed)](#2-install-thonny-if-not-installed)
   - [💻 Code Explanation](#-code-explanation)
-    - [**Python Code** (`pico_control.py`)](#python-code-pico_controlpy)
+    - [**Python Code** (`main.py`)](#python-code-pico_controlpy)
       - [Key Components](#key-components)
       - [Main Functions](#main-functions)
     - [**MATLAB Code** (`plot_data.m`)](#matlab-code-plot_datam)
@@ -51,7 +51,7 @@ cd pi-day-workshop
 ---
 
 ## 💻 Code Explanation
-### **Python Code** (`pico_control.py`)
+### **Python Code** (`main.py/outdoor_light.py`)
 The script controls the brightness and color of an LED using:
 - **Photoresistor** – Adjusts LED brightness based on ambient light.
 - **Potentiometer** – Adjusts LED hue and brightness.
@@ -96,6 +96,7 @@ The MATLAB script:
 #### **Key Parts**
 1. Sets up a serial connection to the Pico:
 ```matlab
+% Example:
 portName = "/dev/cu.usbmodem2101";
 baudRate = 115200;
 device = serialport(portName, baudRate);
@@ -131,7 +132,7 @@ sensorResistance = R_fixed * ((3.3 - sensorVoltage) / sensorVoltage);
 ---
 
 ## 🎯 How to Run
-1. Upload `pico_control.py` to the Pico using Thonny.
+1. Upload `main.py` and `outdoor_light.py` to the Pico using Thonny.
 2. Open MATLAB.
 3. Run `plot_data.m`.
 
